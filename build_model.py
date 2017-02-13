@@ -14,8 +14,8 @@ def main():
     model_dict={}
 
     # Read features and annotations
-    data = cp.load(open('./training_features.pkl'))
-    annot = cp.load(open('./annotation_training.pkl'))
+    data = cp.load(open('./train_val_combined_features.pkl'))
+    annot = cp.load(open('./data/annotation_training_validation.pkl'))
     X = data['X']
     v = data['V']
     print 'feature shape:',np.shape(X)

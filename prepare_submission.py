@@ -6,7 +6,7 @@ from sklearn import preprocessing
 import cPickle as cp
 
 models=cp.load(open('./predictor_model.pkl'))
-locals().update(cp.load(open('validation_features.pkl')))
+locals().update(cp.load(open('test_features.pkl')))
 allkeys = ['extraversion','neuroticism','agreeableness',\
 'conscientiousness','interview','openness']
 
