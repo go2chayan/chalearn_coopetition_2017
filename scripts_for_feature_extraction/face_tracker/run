@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -p standard
+#SBATCH -J facial_action
+#SBATCH -o facetracker_%j_%a
+#SBATCH --mem=0gb
+#SBATCH -t 23:58:00
+#SBATCH -a 0-19
+
+
+module load opencv/2.4.11
+for ((i=$SLURM_ARRAY_TASK_ID*100;i<($SLURM_ARRAY_TASK_ID + 1)*100;i++))
+do
+./face_tracker --noshow -esen 18 -job $i -input /scratch/mtanveer/coopetition/testdat/videos/*.mp4
+done
+

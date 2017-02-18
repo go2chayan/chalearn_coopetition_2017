@@ -1,0 +1,13 @@
+1. Use the scripts located in  scripts_for_feature_extraction folder for extracting the features and keep in data/ folder.
+These scripts use some free and a commercial software (SHORE). We don't distribute any of those pieces of software.
+For convenience, features are already extracted and shared in the dropbox folder: https://www.dropbox.com/sh/ya5plmla06ua1vy/AACSt185H2OdA9Po5YdLt9K3a?dl=0
+
+2. Run extract-features.py for create pkl files containing features
+
+3. Run build_model.py to build model
+
+4. Run prediction.py for your own experiment
+
+5. Run prepare_submission.py to prepare the pkl file
+
+6. Modify the code accordingly to connect the files appropriately.
